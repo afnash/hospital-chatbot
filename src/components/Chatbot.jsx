@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import docData from '../data/doc.json';
 
 export default function Chatbot({ onBookNow }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   
   const initialMessages = [
     { sender: 'bot', text: 'Hello! How can I help you today?' },
@@ -15,6 +15,7 @@ export default function Chatbot({ onBookNow }) {
 
   const [messages, setMessages] = useState(initialMessages);
   const messagesEndRef = useRef(null);
+  const scrollRef = useRef({});
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -125,7 +126,10 @@ export default function Chatbot({ onBookNow }) {
 
                 {msg.type === 'doctors' && (
                   <div className="relative mt-2">
-                    <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pr-8">
+                    <div 
+                      ref={(el) => (scrollRef.current[idx] = el)}
+                      className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pr-8"
+                    >
                       {msg.doctors.map((doc, dIdx) => (
                         <div key={dIdx} className="snap-center shrink-0 w-[260px] min-h-[180px] bg-white border border-outline-variant rounded-2xl p-5 shadow-sm flex flex-col gap-4">
                           <div className="flex items-center gap-4">
@@ -155,10 +159,17 @@ export default function Chatbot({ onBookNow }) {
                     </div>
                     {/* Right Arrow Indicator */}
                     {msg.doctors.length > 1 && (
-                      <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-[#f0f4f9] to-transparent flex items-center justify-end pointer-events-none rounded-r-2xl pr-1">
-                        <div className="w-6 h-6 rounded-full bg-white shadow border border-outline-variant flex items-center justify-center text-primary/70">
+                      <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-white via-white/40 to-transparent flex items-center justify-end pointer-events-none rounded-r-2xl pr-1">
+                        <button
+                          onClick={() => {
+                            if (scrollRef.current[idx]) {
+                              scrollRef.current[idx].scrollBy({ left: 240, behavior: 'smooth' });
+                            }
+                          }}
+                          className="w-7 h-7 rounded-full bg-white shadow border border-outline-variant flex items-center justify-center text-primary hover:bg-slate-50 pointer-events-auto transition-all cursor-pointer"
+                        >
                           <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                        </div>
+                        </button>
                       </div>
                     )}
                   </div>

@@ -1,55 +1,69 @@
 export default function Trust() {
+  const values = [
+    {
+      icon: "biotech",
+      title: "Cutting-Edge Technology",
+      desc: "Equipped with the latest robotic surgery systems and diagnostic imaging for pinpoint accuracy."
+    },
+    {
+      icon: "favorite",
+      title: "Compassionate Care",
+      desc: "Treating every patient like family with empathy, respect, and personalized attention."
+    },
+    {
+      icon: "public",
+      title: "Global Standards",
+      desc: "Adhering to strict international protocols for hygiene, safety, and clinical outcomes."
+    }
+  ];
+
   return (
-    <section className="py-24 bg-primary text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary-container/10 -skew-x-12 translate-x-1/2"></div>
-      <div className="max-w-7xl mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        <div className="relative">
-          <img className="rounded-2xl shadow-2xl w-full h-[500px] object-cover" alt="Medical staff" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD16xa_qVMld9JzavScwLXyHNtrObLK6p93M9IZz_9zuXLnqraXMSt7LkQxaFQQkqgQmLL1sHe2w7HcIRm2fiovdXGzpxxQgpIqvWZjiGGLsUFTqHTHGrCi7ZKyNg2v_F0lLY77cA5Ld4hPr7NKgTCkErZ7pU2dMyVJJ4X-l-z2uBvBMAYF1w1CNfcHsue1CLkaurU7pwGyoSV-Uy6Xok3HRYOKO51y0_2pI6GNPtwmwpc_h6ntb74u_BgPsJvJQArfRDowDMAX-ccR" />
-          <div className="absolute -bottom-8 -right-8 glass-effect p-8 rounded-xl border border-white/20 hidden md:block">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-secondary rounded-full">
-                <span className="material-symbols-outlined text-white">health_and_safety</span>
-              </div>
-              <div>
-                <p className="text-primary font-bold text-lg">JCI Accredited</p>
-                <p className="text-on-surface-variant text-xs">International Standard of Care</p>
-              </div>
-            </div>
+    <section className="py-20 bg-white text-slate-900 overflow-hidden relative select-none border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        {/* Left: Image / Showcase */}
+        <div className="lg:col-span-6 relative">
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+            <img 
+              className="w-full h-full object-cover" 
+              alt="Medical staff" 
+              src="/trust.png" 
+            />
           </div>
         </div>
-        <div>
-          <span className="font-label-caps text-on-primary-container tracking-widest mb-4 block uppercase">The St. Antony Difference</span>
-          <h2 className="font-h2 text-h2 mb-8 leading-tight">Why Choose Our Medical Center?</h2>
-          <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="material-symbols-outlined text-white">biotech</span>
-              </div>
-              <div>
-                <h4 className="font-manrope font-bold text-lg mb-2">Cutting-Edge Technology</h4>
-                <p className="text-blue-100/70 text-sm leading-relaxed">Equipped with the latest robotic surgery systems and diagnostic imaging for pinpoint accuracy.</p>
-              </div>
+
+        {/* Right: Text & Values */}
+        <div className="lg:col-span-6 space-y-8">
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-blue-50 border border-blue-100 text-blue-800 text-xs font-semibold tracking-wider">
+              The St. Antony Difference
             </div>
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="material-symbols-outlined text-white">favorite</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+              Why Patients Choose Us
+            </h2>
+            <p className="text-slate-500 font-normal text-sm leading-relaxed max-w-xl">
+              We combine trusted local healthcare roots with global medical excellence to create a truly supportive healing environment.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {values.map((v, i) => (
+              <div 
+                key={i} 
+                className="flex gap-4 p-4 rounded border border-slate-100 bg-slate-50/40 hover:bg-slate-50 transition-all duration-200"
+              >
+                <div className="flex-shrink-0 w-10 h-10 rounded bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+                  <span className="material-symbols-outlined text-xl">{v.icon}</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-base text-slate-900 mb-0.5 leading-snug">{v.title}</h4>
+                  <p className="text-slate-500 text-xs leading-relaxed">{v.desc}</p>
+                </div>
               </div>
-              <div>
-                <h4 className="font-manrope font-bold text-lg mb-2">Compassionate Care</h4>
-                <p className="text-blue-100/70 text-sm leading-relaxed">Treating every patient like family with empathy, respect, and personalized attention.</p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="material-symbols-outlined text-white">public</span>
-              </div>
-              <div>
-                <h4 className="font-manrope font-bold text-lg mb-2">Global Standards</h4>
-                <p className="text-blue-100/70 text-sm leading-relaxed">Adhering to strict international protocols for hygiene, safety, and clinical outcomes.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );
