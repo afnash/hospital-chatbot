@@ -70,10 +70,10 @@ export default function Chatbot({ onBookNow }) {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4">
+    <div className={`fixed z-[100] transition-all duration-300 ${isOpen ? 'inset-0 md:inset-auto md:bottom-6 md:right-6 flex flex-col' : 'bottom-6 right-6 flex flex-col items-end gap-4'}`}>
       {/* Chat Window */}
       <div 
-        className={`w-[400px] bg-white rounded-3xl shadow-2xl border border-outline-variant flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'}`}
+        className={`bg-white shadow-2xl flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 ${isOpen ? 'opacity-100 scale-100 w-full h-full md:w-[400px] md:h-[620px] md:rounded-3xl flex-1' : 'opacity-0 scale-90 pointer-events-none w-[400px] h-0 md:rounded-3xl'} border border-outline-variant`}
         id="chat-window"
       >
         <div className="bg-primary px-6 py-4 flex items-center justify-between">
@@ -89,12 +89,12 @@ export default function Chatbot({ onBookNow }) {
               </div>
             </div>
           </div>
-          <button className="text-white/60 hover:text-white transition-colors" onClick={handleCloseChat}>
-            <span className="material-symbols-outlined">close</span>
+          <button className="text-white hover:bg-white/10 p-2 rounded-full transition-colors flex items-center justify-center" onClick={handleCloseChat}>
+            <span className="material-symbols-outlined text-xl">close</span>
           </button>
         </div>
 
-        <div className="h-[520px] overflow-y-auto p-6 bg-surface-container-lowest flex flex-col gap-4">
+        <div className="flex-1 md:h-[480px] overflow-y-auto p-4 sm:p-6 bg-surface-container-lowest flex flex-col gap-4">
           {messages.map((msg, idx) => (
             <div key={idx} className={`flex gap-3 ${msg.sender === 'user' ? 'ml-auto flex-row-reverse max-w-[85%]' : 'max-w-[95%] min-w-[85%]'}`}>
               {msg.sender === 'bot' && (
@@ -204,7 +204,7 @@ export default function Chatbot({ onBookNow }) {
 
       {/* Toggle Button */}
       <button 
-        className="w-14 h-14 bg-secondary text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center group" 
+        className={`w-14 h-14 bg-secondary text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center group ${isOpen ? 'hidden md:flex self-end mt-4' : 'flex'}`} 
         onClick={() => isOpen ? handleCloseChat() : setIsOpen(true)}
       >
         <span className="material-symbols-outlined text-2xl">{isOpen ? 'close' : 'chat'}</span>

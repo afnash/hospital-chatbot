@@ -95,7 +95,7 @@ export default function BookingPage({ doctor, onBack }) {
   ];
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen pt-24 pb-12 font-body-md text-slate-950">
+    <div className="bg-[#f8fafc] min-h-screen pt-24 pb-24 md:pb-12 font-body-md text-slate-950">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Button */}
@@ -216,7 +216,7 @@ export default function BookingPage({ doctor, onBack }) {
 
           {/* Right Column (Booking Widget) */}
           <div className="lg:col-span-5">
-            <Card className="sticky top-28">
+            <Card className="md:sticky md:top-28">
               <CardHeader>
                 <CardTitle>Schedule Appointment</CardTitle>
               </CardHeader>
@@ -252,7 +252,7 @@ export default function BookingPage({ doctor, onBack }) {
                 {/* Slots Selector */}
                 <div className="mb-8">
                   <p className="text-sm font-semibold text-slate-700 mb-3">Available Slots</p>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                     {(() => {
                       const generatedSlots = [];
                       doctor.available_slots.forEach(range => {
