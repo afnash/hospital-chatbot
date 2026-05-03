@@ -277,8 +277,8 @@ export default function BookingPage({ doctor, onBack }) {
                       
                       return generatedSlots.map((slot, idx) => {
                         const isActive = selectedSlot === slot;
-                        // All slots are now clickable and bookable
-                        const isUnbookable = false;
+                        // Make specific slots red and unclickable, while keeping green ones clickable
+                        const isUnbookable = idx === 1 || idx === 5;
                         
                         let baseClasses = "py-2 px-2 rounded-full border-2 text-[13px] font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5 ";
                         
