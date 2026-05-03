@@ -1,0 +1,145 @@
+{
+  "departments": [
+    {
+      "name": "General Medicine",
+      "doctors": [
+        {
+          "name": "Dr. Ramesh Nath",
+          "dept": "General Medicine",
+          "available_days": ["Monday", "Wednesday", "Friday"],
+          "available_slots": ["09:00-11:00", "14:00-16:00"],
+          "fee": 500
+        },
+        {
+          "name": "Dr. Kumar",
+          "dept": "General Medicine",
+          "available_days": ["Tuesday", "Thursday", "Saturday"],
+          "available_slots": ["10:00-12:00", "15:00-17:00"],
+          "fee": 400
+        },
+        {
+          "name": "Dr. Sabeena",
+          "dept": "General Medicine",
+          "available_days": ["Monday", "Thursday"],
+          "available_slots": ["11:00-13:00", "16:00-18:00"],
+          "fee": 450
+        },
+        {
+          "name": "Dr. Kurian K",
+          "dept": "General Medicine",
+          "available_days": ["Wednesday", "Friday", "Sunday"],
+          "available_slots": ["08:30-10:30", "13:30-15:30"],
+          "fee": 550
+        }
+      ]
+    },
+    {
+      "name": "Cardiology",
+      "doctors": [
+        {
+          "name": "Dr. Anil Varma",
+          "dept": "Cardiology",
+          "available_days": ["Monday", "Thursday"],
+          "available_slots": ["10:00-13:00"],
+          "fee": 800
+        }
+      ]
+    },
+    {
+      "name": "Orthopedics",
+      "doctors": [
+        {
+          "name": "Dr. Joseph Mathew",
+          "dept": "Orthopedics",
+          "available_days": ["Tuesday", "Friday"],
+          "available_slots": ["09:30-12:30"],
+          "fee": 700
+        }
+      ]
+    },
+    {
+      "name": "Pediatrics",
+      "doctors": [
+        {
+          "name": "Dr. Nisha Paul",
+          "dept": "Pediatrics",
+          "available_days": ["Monday", "Wednesday", "Saturday"],
+          "available_slots": ["10:00-12:00", "17:00-19:00"],
+          "fee": 400
+        }
+      ]
+    },
+    {
+      "name": "Gynecology",
+      "doctors": [
+        {
+          "name": "Dr. Asha Menon",
+          "dept": "Gynecology",
+          "available_days": ["Tuesday", "Thursday"],
+          "available_slots": ["11:00-14:00"],
+          "fee": 600
+        }
+      ]
+    },
+    {
+      "name": "Dermatology",
+      "doctors": [
+        {
+          "name": "Dr. Rahul Nair",
+          "dept": "Dermatology",
+          "available_days": ["Wednesday", "Saturday"],
+          "available_slots": ["12:00-15:00"],
+          "fee": 500
+        }
+      ]
+    },
+    {
+      "name": "ENT",
+      "doctors": [
+        {
+          "name": "Dr. Shyam Krishnan",
+          "dept": "ENT",
+          "available_days": ["Monday", "Friday"],
+          "available_slots": ["09:00-11:30"],
+          "fee": 450
+        }
+      ]
+    },
+    {
+      "name": "Neurology",
+      "doctors": [
+        {
+          "name": "Dr. Vivek Rao",
+          "dept": "Neurology",
+          "available_days": ["Thursday"],
+          "available_slots": ["14:00-18:00"],
+          "fee": 900
+        }
+      ]
+    },
+    {
+      "name": "Gastroenterology",
+      "doctors": [
+        {
+          "name": "Dr. Farhan Ali",
+          "dept": "Gastroenterology",
+          "available_days": ["Tuesday", "Saturday"],
+          "available_slots": ["10:30-13:30"],
+          "fee": 850
+        }
+      ]
+    },
+    {
+      "name": "Emergency / Casualty",
+      "doctors": [
+        {
+          "name": "Dr. On Call",
+          "dept": "Emergency",
+          "available_days": ["All Days"],
+          "available_slots": ["00:00-23:59"],
+          "fee": 1000
+        }
+      ]
+    }
+  ]
+}
