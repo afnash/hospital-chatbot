@@ -280,14 +280,14 @@ export default function BookingPage({ doctor, onBack }) {
                         // Make specific slots red and unclickable, while keeping green ones clickable
                         const isUnbookable = idx === 1 || idx === 5;
                         
-                        let baseClasses = "py-2 px-2 rounded-full border-2 text-[13px] font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5 ";
+                        let baseClasses = "py-2 px-2 rounded-full border-2 text-[13px] font-semibold transition-all duration-200 shadow-sm flex items-center justify-center gap-1.5 ";
                         
                         if (isUnbookable) {
                           baseClasses += "border-red-400 bg-red-50 text-red-400 cursor-not-allowed opacity-60";
                         } else if (isActive) {
-                          baseClasses += "bg-green-600 border-green-600 text-white";
+                          baseClasses += "bg-green-600 border-green-600 text-white cursor-pointer hover:scale-105 active:scale-95";
                         } else {
-                          baseClasses += "bg-white border-green-500 text-green-700 hover:bg-green-50";
+                          baseClasses += "bg-white border-green-500 text-green-700 hover:bg-green-50 cursor-pointer hover:scale-105 active:scale-95";
                         }
 
                         return (
