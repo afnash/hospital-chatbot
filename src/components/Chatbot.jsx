@@ -124,30 +124,43 @@ export default function Chatbot({ onBookNow }) {
                 )}
 
                 {msg.type === 'doctors' && (
-                  <div className="flex gap-4 mt-2 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                    {msg.doctors.map((doc, dIdx) => (
-                      <div key={dIdx} className="snap-center shrink-0 w-[260px] min-h-[180px] bg-white border border-outline-variant rounded-2xl p-5 shadow-sm flex flex-col gap-4">
-                        <div className="flex items-center gap-4">
-                          <img src={doc.image || '/favicon.svg'} alt={doc.name} className="w-14 h-14 rounded-full object-cover border border-slate-100 bg-slate-50 shrink-0 shadow-sm" />
-                          <div className="overflow-hidden">
-                            <p className="font-bold text-primary text-[15px] truncate">{doc.name}</p>
-                            <p className="text-[11px] text-secondary font-semibold uppercase tracking-wider truncate mt-0.5">{doc.dept}</p>
+                  <div className="relative mt-2">
+                    <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] pr-8">
+                      {msg.doctors.map((doc, dIdx) => (
+                        <div key={dIdx} className="snap-center shrink-0 w-[260px] min-h-[180px] bg-white border border-outline-variant rounded-2xl p-5 shadow-sm flex flex-col gap-4">
+                          <div className="flex items-center gap-4">
+                            <img src={doc.image || '/favicon.svg'} alt={doc.name} className="w-14 h-14 rounded-full object-cover border border-slate-100 bg-slate-50 shrink-0 shadow-sm" />
+                            <div className="overflow-hidden">
+                              <p className="font-bold text-primary text-[15px] truncate">{doc.name}</p>
+                              <p className="text-[11px] text-secondary font-semibold uppercase tracking-wider truncate mt-0.5">{doc.dept}</p>
+                            </div>
                           </div>
+                          <div className="space-y-2.5 text-[13px] text-on-surface-variant bg-surface-container-lowest rounded-xl p-3 border border-slate-50 grow flex flex-col justify-center">
+                            <p className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] text-secondary/80">calendar_month</span> <span className="truncate font-medium">{doc.available_days.join(', ')}</span></p>
+                            <p className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] text-secondary/80">schedule</span> <span className="truncate font-medium">{doc.available_slots.join(', ')}</span></p>
+                          </div>
+                          <button 
+                            className="w-full bg-secondary text-white py-2.5 rounded-xl text-[13px] font-semibold hover:bg-primary hover:shadow-md transition-all mt-auto shrink-0 tracking-wide"
+                            onClick={() => {
+                              if (onBookNow) {
+                                onBookNow(doc.name);
+                                handleCloseChat();
+                              }
+                            }}
+                          >
+                            Book now
+                          </button>
                         </div>
-                        <div className="space-y-2.5 text-[13px] text-on-surface-variant bg-surface-container-lowest rounded-xl p-3 border border-slate-50 grow flex flex-col justify-center">
-                          <p className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] text-secondary/80">calendar_month</span> <span className="truncate font-medium">{doc.available_days.join(', ')}</span></p>
-                          <p className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] text-secondary/80">schedule</span> <span className="truncate font-medium">{doc.available_slots.join(', ')}</span></p>
+                      ))}
+                    </div>
+                    {/* Right Arrow Indicator */}
+                    {msg.doctors.length > 1 && (
+                      <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-[#f0f4f9] to-transparent flex items-center justify-end pointer-events-none rounded-r-2xl pr-1">
+                        <div className="w-6 h-6 rounded-full bg-white shadow border border-outline-variant flex items-center justify-center text-primary/70">
+                          <span className="material-symbols-outlined text-[16px]">chevron_right</span>
                         </div>
-                        <button 
-                          className="w-full bg-secondary text-white py-2.5 rounded-xl text-[13px] font-semibold hover:bg-primary hover:shadow-md transition-all mt-auto shrink-0 tracking-wide"
-                          onClick={() => {
-                            if (onBookNow) onBookNow(doc.name);
-                          }}
-                        >
-                          Book now
-                        </button>
                       </div>
-                    ))}
+                    )}
                   </div>
                 )}
               </div>
