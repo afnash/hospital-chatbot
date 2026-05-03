@@ -1,0 +1,204 @@
+{
+  "doctors": [
+    {
+      "name": "Dr. Ramesh Nath",
+      "dept": "General Medicine",
+      "available_days": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ],
+      "available_slots": [
+        "09:00-11:00",
+        "14:00-16:00"
+      ],
+      "description": "Dr. Ramesh Nath is a Senior Consultant in General Medicine with over 18 years of experience in internal medicine. He completed his MBBS and MD in Internal Medicine from reputed institutions and has extensive expertise in managing chronic lifestyle diseases such as diabetes, hypertension, and metabolic disorders. He is known for his structured diagnostic approach and emphasis on preventive care.\n\nDr. Nath has actively participated in national health programs and rural medical camps, focusing on early disease detection. He has received awards for excellence in patient care and public health service. His areas of expertise include infectious diseases, geriatric care, and long-term disease management.\n\nHe believes in educating patients about their conditions and encourages lifestyle modification as a key component of treatment. His calm and detailed consultation style has earned him strong patient trust.",
+      "image": "/images/doctors/dr_ramesh_nath.png",
+      "experience": "18 years",
+      "fee": 500,
+      "education": [
+        {
+          "degree": "MBBS",
+          "institution": "Reputed Institution",
+          "year": "2006"
+        },
+        {
+          "degree": "MD in General Medicine",
+          "institution": "Reputed Institution",
+          "year": "2010"
+        }
+      ],
+      "awards": [
+        {
+          "award": "Best Doctor Award",
+          "year": "2020"
+        },
+        {
+          "award": "Best Doctor Award",
+          "year": "2021"
+        }
+      ]
+    },
+    {
+      "name": "Dr. Kumar",
+      "dept": "General Medicine",
+      "available_days": [
+        "Tuesday",
+        "Thursday",
+        "Saturday"
+      ],
+      "available_slots": [
+        "10:00-12:00",
+        "15:00-17:00"
+      ],
+      "description": "Dr. Kumar is a General Physician with over 12 years of experience in treating acute and chronic medical conditions. He completed his MBBS and holds certifications in family medicine and emergency care. He is known for his quick diagnosis and efficient treatment strategies.\n\nHis expertise includes fever management, respiratory infections, lifestyle diseases, and routine health screenings. He has contributed to several community outreach programs and has been recognized for his work in rural healthcare.\n\nDr. Kumar focuses on patient education and preventive care, ensuring that patients understand their health conditions and treatment plans clearly.",
+      "image": "/images/doctors/dr_kumar.png"
+    },
+    {
+      "name": "Dr. Sabeena",
+      "dept": "General Medicine",
+      "available_days": [
+        "Monday",
+        "Thursday"
+      ],
+      "available_slots": [
+        "11:00-13:00",
+        "16:00-18:00"
+      ],
+      "description": "Dr. Sabeena is an experienced physician with over 10 years of practice in General Medicine. She holds an MBBS and MD in General Medicine and specializes in women’s health, metabolic disorders, and preventive medicine.\n\nShe is known for her empathetic patient care and strong communication skills. She has been actively involved in awareness programs for lifestyle diseases and preventive healthcare.\n\nHer expertise includes thyroid disorders, anemia, hormonal imbalances, and chronic disease management. She has received recognition for improving patient compliance and promoting preventive health practices.",
+      "image": "/images/doctors/dr_sabeena.png"
+    },
+    {
+      "name": "Dr. Kurian K",
+      "dept": "General Medicine",
+      "available_days": [
+        "Wednesday",
+        "Friday",
+        "Sunday"
+      ],
+      "available_slots": [
+        "08:30-10:30",
+        "13:30-15:30"
+      ],
+      "description": "Dr. Kurian K is a senior General Physician with over 20 years of experience. He completed his MBBS and MD and has extensive expertise in geriatric medicine and infectious diseases.\n\nHe is known for his thorough clinical evaluations and personalized treatment approaches. He has contributed to multiple medical camps and mentoring programs for young doctors.\n\nHis expertise includes chronic disease care, elderly patient management, and preventive medicine. He has received several honors for his contributions to internal medicine.",
+      "image": "/images/doctors/dr_kurian_k.png"
+    },
+    {
+      "name": "Dr. Anil Varma",
+      "dept": "Cardiology",
+      "available_days": [
+        "Monday",
+        "Thursday"
+      ],
+      "available_slots": [
+        "10:00-13:00"
+      ],
+      "description": "Dr. Anil Varma is a Cardiologist with over 15 years of experience in heart care. He completed his DM in Cardiology and specializes in coronary artery disease, heart failure, and arrhythmias.\n\nHe has performed numerous cardiac procedures including angiography and angioplasty. He has published research papers and is an active member of cardiology associations.\n\nHe has received awards for excellence in cardiac care and focuses on preventive cardiology and lifestyle interventions.",
+      "image": "/images/doctors/dr_anil_varma.png"
+    },
+    {
+      "name": "Dr. Joseph Mathew",
+      "dept": "Orthopedics",
+      "available_days": [
+        "Tuesday",
+        "Friday"
+      ],
+      "available_slots": [
+        "09:30-12:30"
+      ],
+      "description": "Dr. Joseph Mathew is an Orthopedic Surgeon with over 14 years of experience. He completed his MS in Orthopedics and specializes in joint replacement, fracture management, and sports injuries.\n\nHe has successfully performed numerous surgeries and is known for his rehabilitation-focused treatment approach. He has received awards for surgical excellence.\n\nHis expertise includes knee and hip replacement, arthritis management, and trauma care.",
+      "image": "/images/doctors/dr_joseph_mathew.png"
+    },
+    {
+      "name": "Dr. Nisha Paul",
+      "dept": "Pediatrics",
+      "available_days": [
+        "Monday",
+        "Wednesday",
+        "Saturday"
+      ],
+      "available_slots": [
+        "10:00-12:00",
+        "17:00-19:00"
+      ],
+      "description": "Dr. Nisha Paul is a Pediatrician with over 11 years of experience. She completed her MD in Pediatrics and specializes in neonatal care, immunization, and child development.\n\nShe is known for her friendly approach and ability to handle pediatric emergencies. She actively participates in child health awareness programs.\n\nHer expertise includes vaccination, nutrition guidance, and pediatric infection management.",
+      "image": "/images/doctors/dr_nisha_paul.png"
+    },
+    {
+      "name": "Dr. Asha Menon",
+      "dept": "Gynecology",
+      "available_days": [
+        "Tuesday",
+        "Thursday"
+      ],
+      "available_slots": [
+        "11:00-14:00"
+      ],
+      "description": "Dr. Asha Menon is a Gynecologist with over 13 years of experience. She completed her MS in Obstetrics and Gynecology and specializes in pregnancy care, infertility treatment, and minimally invasive procedures.\n\nShe has handled numerous high-risk pregnancies and is known for her compassionate care. She has received awards for excellence in gynecology.\n\nHer expertise includes prenatal care, hormonal disorders, and laparoscopic surgeries.",
+      "image": "/images/doctors/dr_asha_menon.png"
+    },
+    {
+      "name": "Dr. Rahul Nair",
+      "dept": "Dermatology",
+      "available_days": [
+        "Wednesday",
+        "Saturday"
+      ],
+      "available_slots": [
+        "12:00-15:00"
+      ],
+      "description": "Dr. Rahul Nair is a Dermatologist with over 9 years of experience. He specializes in acne treatment, cosmetic dermatology, and allergy management.\n\nHe is known for his modern treatment techniques and has received recognition in cosmetic dermatology.\n\nHis expertise includes skin disorders, hair loss treatment, and aesthetic procedures.",
+      "image": "/images/doctors/dr_rahul_nair.png"
+    },
+    {
+      "name": "Dr. Shyam Krishnan",
+      "dept": "ENT",
+      "available_days": [
+        "Monday",
+        "Friday"
+      ],
+      "available_slots": [
+        "09:00-11:30"
+      ],
+      "description": "Dr. Shyam Krishnan is an ENT specialist with over 12 years of experience. He specializes in sinus surgeries, hearing disorders, and voice-related issues.\n\nHe is known for his accurate diagnosis and effective treatment methods.\n\nHis expertise includes ENT surgeries, allergy treatments, and hearing care.",
+      "image": "/images/doctors/dr_shyam_krishnan.png"
+    },
+    {
+      "name": "Dr. Vivek Rao",
+      "dept": "Neurology",
+      "available_days": [
+        "Thursday"
+      ],
+      "available_slots": [
+        "14:00-18:00"
+      ],
+      "description": "Dr. Vivek Rao is a Neurologist with over 16 years of experience. He specializes in stroke management, epilepsy, and neurological disorders.\n\nHe is known for his advanced diagnostic skills and evidence-based treatments. He has received multiple recognitions in neurology.\n\nHis expertise includes migraine management, neuro-rehabilitation, and stroke care.",
+      "image": "/images/doctors/dr_vivek_rao.png"
+    },
+    {
+      "name": "Dr. Farhan Ali",
+      "dept": "Gastroenterology",
+      "available_days": [
+        "Tuesday",
+        "Saturday"
+      ],
+      "available_slots": [
+        "10:30-13:30"
+      ],
+      "description": "Dr. Farhan Ali is a Gastroenterologist with over 14 years of experience. He specializes in liver diseases, endoscopy, and digestive disorders.\n\nHe is known for his patient-focused approach and has received awards for excellence in gastroenterology.\n\nHis expertise includes GI disorders, liver care, and endoscopic procedures.",
+      "image": "/images/doctors/dr_farhan_ali.png"
+    },
+    {
+      "name": "Dr. On Call",
+      "dept": "Emergency",
+      "available_days": [
+        "All Days"
+      ],
+      "available_slots": [
+        "00:00-23:59"
+      ],
+      "description": "The Emergency Department is staffed by experienced on-call physicians available 24/7. The team is trained in handling trauma, critical care, and emergency procedures.\n\nThey are equipped to manage life-threatening conditions efficiently with rapid response systems.\n\nTheir expertise includes emergency stabilization, trauma care, and critical interventions.",
+      "image": "/images/doctors/dr_on_call.png"
+    }
+  ]
+}
