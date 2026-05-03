@@ -7,13 +7,13 @@ export default function Stats() {
       desc: "Direct surveys over past 5 years"
     },
     {
-      icon: "clinical_trial",
+      icon: "medical_services",
       val: "25+",
       label: "Specialties",
       desc: "Specialized medicine departments"
     },
     {
-      icon: "acute",
+      icon: "health_and_safety",
       val: "A-Grade",
       label: "Clinical Safety",
       desc: "Top-tier hygienic & safety protocols"

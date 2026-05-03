@@ -258,17 +258,17 @@ export default function BookingPage({ doctor, onBack }) {
                       doctor.available_slots.forEach(range => {
                         const [start, end] = range.split('-');
                         if (start && end) {
-                          let currentStr = start.trim();
-                          const endStr = end.trim();
-                          while (currentStr < endStr) {
-                            generatedSlots.push(currentStr);
-                            let [h, m] = currentStr.split(':').map(Number);
-                            m += 20;
-                            if (m >= 60) {
-                              h += 1;
-                              m -= 60;
-                            }
-                            currentStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+                          const parseTimeToMinutes = (t) => {
+                            const [h, m] = t.trim().split(':').map(Number);
+                            return h * 60 + m;
+                          };
+                          const startMins = parseTimeToMinutes(start);
+                          const endMins = parseTimeToMinutes(end);
+                          
+                          for (let m = startMins; m < endMins; m += 20) {
+                            const hStr = Math.floor(m / 60).toString().padStart(2, '0');
+                            const mStr = (m % 60).toString().padStart(2, '0');
+                            generatedSlots.push(`${hStr}:${mStr}`);
                           }
                         } else {
                           generatedSlots.push(range);
@@ -277,8 +277,8 @@ export default function BookingPage({ doctor, onBack }) {
                       
                       return generatedSlots.map((slot, idx) => {
                         const isActive = selectedSlot === slot;
-                        // Use idx to make unbookable deterministic but sparse (~20% unbookable)
-                        const isUnbookable = (idx * 7 + selectedDate.charCodeAt(1)) % 5 === 0;
+                        // All slots are now clickable and bookable
+                        const isUnbookable = false;
                         
                         let baseClasses = "py-2 px-2 rounded-full border-2 text-[13px] font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5 ";
                         
