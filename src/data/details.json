@@ -452,6 +452,49 @@
         }
       ]
     },
+   {
+  "name": "Dr. Sreekumar",
+  "dept": "Gastroenterology",
+  "available_days": [
+    "Monday",
+    "Thursday"
+  ],
+  "available_slots": [
+    "10:00-12:00",
+    "15:00-17:00"
+  ],
+  "description": "Dr. Sreekumar is a highly experienced Gastroenterologist with over 12 years of clinical practice in diagnosing and managing digestive system disorders. He completed his MBBS followed by MD in General Medicine and DM in Gastroenterology from reputed medical institutions.\n\nHe specializes in the treatment of gastrointestinal diseases including acid reflux, irritable bowel syndrome (IBS), liver disorders, and pancreatic conditions. He has extensive experience in performing diagnostic and therapeutic endoscopic procedures such as colonoscopy and upper GI endoscopy.\n\nDr. Sreekumar is known for his systematic diagnostic approach and patient-friendly consultation style. He focuses on identifying root causes and providing long-term treatment plans rather than just symptomatic relief.\n\nHe has been actively involved in clinical research and has participated in multiple gastroenterology conferences. He has received recognition for his contributions to digestive health awareness programs.\n\nHis areas of expertise include liver disease management, gastrointestinal infections, endoscopic procedures, inflammatory bowel disease (IBD), and preventive digestive healthcare.",
+  "image": "/images/doctors/dr_sreekumar.png",
+  "experience": "12 years",
+  "fee": 700,
+  "education": [
+    {
+      "degree": "MBBS",
+      "institution": "Government Medical College",
+      "year": "2010"
+    },
+    {
+      "degree": "MD in General Medicine",
+      "institution": "State Medical University",
+      "year": "2014"
+    },
+    {
+      "degree": "DM in Gastroenterology",
+      "institution": "National Institute of Medical Sciences",
+      "year": "2018"
+    }
+  ],
+  "awards": [
+    {
+      "award": "Best Gastroenterologist Award",
+      "year": "2021"
+    },
+    {
+      "award": "Clinical Excellence Award",
+      "year": "2019"
+    }
+  ]
+},
     {
       "name": "Dr. On Call",
       "dept": "Emergency",

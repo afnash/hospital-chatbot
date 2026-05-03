@@ -206,6 +206,20 @@
           ],
           "fee": 850,
           "image": "/images/doctors/dr_farhan_ali.png"
+        },
+        {
+            "name": "Dr. Sreekumar",
+            "dept": "Gastroenterology",
+            "available_days": [
+                "Monday",
+                "Thursday"
+            ],
+            "available_slots": [
+                "10:00-12:00",
+                "15:00-17:00"
+            ],
+            "fee": 700,
+            "image": "/images/doctors/dr_sreekumar.png"
         }
       ]
     },
